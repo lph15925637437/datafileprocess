@@ -11,10 +11,6 @@ import java.util.Arrays;
  * from RFC 2045 <cite>Multipurpose Internet Mail Extensions (MIME) Part One: 
  * Format of Internet Message Bodies</cite> by Freed and Borenstein.</p> 
  *
- * @see <a href="http://www.ietf.org/rfc/rfc2045.txt">RFC 2045</a>
- * @author Apache Software Foundation
- * @since 1.0-dev
- * @version $Id: Base64.java,v 1.20 2004/05/24 00:21:24 ggregory Exp $
  */
 public class Base64  {
 
