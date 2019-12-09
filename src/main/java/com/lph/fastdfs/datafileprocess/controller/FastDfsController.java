@@ -21,12 +21,14 @@ public class FastDfsController {
 
     public static final Logger logger = LoggerFactory.getLogger(FastDfsController.class);
 
+    public static final String FILE_PATH = "D:\\image\\11.jpg";
+
     @Autowired
     private FastDfsUtil fastDfsUtil;
 
     @RequestMapping("/upload")
-    public String upload(String path) throws IOException {
-        String accessUrl = fastDfsUtil.upload(new File(path));
+    public String upload() throws IOException {
+        String accessUrl = fastDfsUtil.upload(new File(FILE_PATH));
         logger.info("upload file res access url:{}", accessUrl);
         return "success";
     }
@@ -34,6 +36,7 @@ public class FastDfsController {
     @RequestMapping("/download")
     public void download(String path, HttpServletResponse response) throws IOException {
         String decode = URLDecoder.decode(Base64.decodeData(path), ApplicationConst.DEFAULT_CHARSET);
+        logger.info("server path:{}", decode);
         fastDfsUtil.download(decode, null, response);
     }
 

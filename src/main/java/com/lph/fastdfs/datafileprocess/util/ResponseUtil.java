@@ -23,7 +23,6 @@ public class ResponseUtil {
      */
     public static void out(String filename, byte[] bytes, HttpServletResponse response) throws IOException {
         response.reset();
-        response.setStatus(response.SC_PARTIAL_CONTENT);
         response.setContentType("applicatoin/octet-stream");
         response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(filename, ApplicationConst.DEFAULT_CHARSET));
         ServletOutputStream out = response.getOutputStream();

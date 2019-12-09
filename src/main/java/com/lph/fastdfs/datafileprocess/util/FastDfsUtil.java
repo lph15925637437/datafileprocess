@@ -102,7 +102,7 @@ public class FastDfsUtil {
     }
 
     public static void main(String[] args) throws UnsupportedEncodingException {
-        String path = "http://192.168.177.128:8888/group1/M00/00/00/wKixgF3nakKAH0OWAA-itrfn0m4.tar.gz";
+        String path = "http://192.168.177.128:8888/group1/M00/00/00/wKixgF3tru2AeRLTAADY7S0D9f4020.jpg";
         String encode = URLEncoder.encode(path, ApplicationConst.DEFAULT_CHARSET);
         String encodeData = Base64.encodeData(encode);
         logger.info("encode:{}", encode);
