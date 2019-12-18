@@ -6,6 +6,7 @@ import com.lph.fastdfs.datafileprocess.util.FastDfsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,5 +49,17 @@ public class FastDfsController {
             return "删除失败";
         }
         return "删除成功";
+    }
+
+    @Value("${thread.pool.core.pool.size}")
+    private String coreSize;
+
+    @RequestMapping("/test")
+    public String test() {
+        System.err.println("coreSize:" + coreSize.equals(""));
+        int i = coreSize.equals("") ? 22 : 11;
+        System.err.println(i);
+        System.err.println("coreSize:" + coreSize == "");
+        return "11";
     }
 }
