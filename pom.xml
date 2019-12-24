@@ -49,7 +49,7 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-            <version>3.4.8</version>
+            <version>3.4.14</version>
         </dependency>
         <!--使用该依赖封装的api实现zookeeper分布式锁操作-->
         <dependency>
