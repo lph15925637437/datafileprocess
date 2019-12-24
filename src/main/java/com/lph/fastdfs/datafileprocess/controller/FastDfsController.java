@@ -1,5 +1,6 @@
 package com.lph.fastdfs.datafileprocess.controller;
 
+import com.lph.fastdfs.datafileprocess.component.TestComponent;
 import com.lph.fastdfs.datafileprocess.constant.ApplicationConst;
 import com.lph.fastdfs.datafileprocess.util.Base64;
 import com.lph.fastdfs.datafileprocess.util.FastDfsUtil;
@@ -26,6 +27,9 @@ public class FastDfsController {
     @Autowired
     private FastDfsUtil fastDfsUtil;
 
+    @Autowired
+    private TestComponent component;
+
     @RequestMapping("/upload")
     public String upload() throws IOException {
         String accessUrl = fastDfsUtil.upload(new File(FILE_PATH));
@@ -48,5 +52,18 @@ public class FastDfsController {
             return "删除失败";
         }
         return "删除成功";
+    }
+
+    @RequestMapping("/lock")
+    public String lock(){
+        try {
+            component.test();
+        } catch (Exception e) {
+            logger.error("acquire lock error:{}", e.getMessage());
+            e.printStackTrace();
+        }
+
+
+        return "success";
     }
 }
