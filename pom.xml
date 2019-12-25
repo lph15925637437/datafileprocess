@@ -19,6 +19,8 @@
     <properties>
         <java.version>1.8</java.version>
         <fast.dfs>1.26.6</fast.dfs>
+        <zookeeper.version>3.4.8</zookeeper.version>
+        <curator.recipes>4.0.0</curator.recipes>
     </properties>
 
     <dependencies>
@@ -49,7 +51,7 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-            <version>3.4.8</version>
+            <version>${zookeeper.version}</version>
         </dependency>
         <!--使用该依赖封装的api实现zookeeper分布式锁操作-->
         <dependency>
@@ -62,7 +64,7 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-            <version>4.0.0</version>
+            <version>${curator.recipes}</version>
         </dependency>
     </dependencies>
 
