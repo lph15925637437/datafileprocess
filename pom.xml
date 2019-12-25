@@ -19,7 +19,7 @@
     <properties>
         <java.version>1.8</java.version>
         <fast.dfs>1.26.6</fast.dfs>
-        <zookeeper.version>3.4.8</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
         <curator.recipes>4.0.0</curator.recipes>
     </properties>
 
