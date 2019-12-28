@@ -9,9 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.nio.Buffer;
-import java.nio.IntBuffer;
-import java.nio.ShortBuffer;
 import java.util.concurrent.TimeUnit;
 
 @Component
@@ -35,11 +32,5 @@ public class TestComponent {
         //关闭客户端
         client.close();
 
-        IntBuffer buffer = IntBuffer.allocate(10);
-//        buffer(IntBuffer.class);
-//        buffer(ShortBuffer.class);
-
     }
-
-
 }
